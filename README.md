@@ -71,9 +71,6 @@ npm run start
 
 All "send to WhatsApp" buttons route through `lib/whatsapp.js`, which builds a `wa.me/{number}?text=` URL with a prefilled, formatted message. To wire to the real number, replace `WHATSAPP_NUMBER` in that file.
 
-## Sample data
-
-Bag catalogue is in `data/bags.js`. Replace photo URLs with real product photography once available — every bag has a main image and 3–4 colour variants.
 
 ## What's intentionally an MVP
 
