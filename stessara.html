@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>STESSARA — Handcrafted Beaded Bags, Lagos</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet" />
+
+   <!-- External Stylesheet Links -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  
+  <script src="script.js" defer></script>
+
+</head>
+
+<body>
+
+<!-- ═══════════════════════════════════════════════════════
+     FIRST VISIT POPUP
+═══════════════════════════════════════════════════════ -->
+<div id="popup-overlay">
+  <div class="popup-modal">
+    <button class="popup-close" id="popup-close-btn" aria-label="Close">&#x2715;</button>
+    <img
+      class="popup-img w-full"
+      src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=800&q=80"
+      alt="STESSARA beaded bag"
+    />
+    <div class="popup-body">
+      <p class="popup-label">Welcome to STESSARA</p>
+      <h2 class="popup-headline">10% Off<br>Your First Order</h2>
+      <p class="popup-sub">Exclusively on our website. Handcrafted luxury, delivered to your door from Lagos.</p>
+      <button class="btn-red w-full" id="popup-shop-btn">Shop Now</button>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════
+     HEADER
+═══════════════════════════════════════════════════════ -->
+<header id="site-header">
+  <a href="#" class="header-brand"> STESSARA </a>
+
+  <nav class="header-nav">
+    <div class="nav-links" style="display:flex;gap:36px;align-items:center;">
+      <a href="#hero">Home</a>
+      <a href="#featured">Shop</a>
+      <a href="#about">About</a>
+    </div>
+    <button class="cart-btn" id="cart-open-btn" aria-label="Open Cart">
+      <!-- Cart Icon SVG -->
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+        <line x1="3" y1="6" x2="21" y2="6"/>
+        <path d="M16 10a4 4 0 01-8 0"/>
+      </svg>
+      <span class="cart-badge" id="cart-badge">0</span>
+    </button>
+    <button class="hamburger" id="hamburger-btn" aria-label="Menu">
+      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+        <line x1="2" y1="6" x2="20" y2="6"/>
+        <line x1="2" y1="12" x2="20" y2="12"/>
+        <line x1="2" y1="18" x2="20" y2="18"/>
+      </svg>
+    </button>
+  </nav>
+</header>
+<nav class="mobile-nav" id="mobile-nav">
+  <a href="#hero">Home</a>
+  <a href="#featured">Shop</a>
+  <a href="#about">About</a>
+</nav>
+
+<!-- ═══════════════════════════════════════════════════════
+     HERO
+═══════════════════════════════════════════════════════ -->
+<section id="hero">
+  <!-- Decorative SVG top-left -->
+  <svg class="hero-deco-tl" viewBox="0 0 60 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="30" cy="10" r="5" fill="#E97197"/>
+    <line x1="30" y1="15" x2="30" y2="35" stroke="#E97197" stroke-width="1"/>
+    <circle cx="30" cy="40" r="7" fill="none" stroke="#E97197" stroke-width="1"/>
+    <line x1="30" y1="47" x2="30" y2="65" stroke="#E97197" stroke-width="1"/>
+    <circle cx="30" cy="70" r="4" fill="#E97197"/>
+    <line x1="30" y1="74" x2="30" y2="90" stroke="#E97197" stroke-width="1"/>
+    <circle cx="30" cy="95" r="6" fill="none" stroke="#E97197" stroke-width="1"/>
+    <line x1="30" y1="101" x2="30" y2="115" stroke="#E97197" stroke-width="1"/>
+    <circle cx="30" cy="118" r="3" fill="#E97197"/>
+  </svg>
+
+  <div class="hero-content" id="hero-content">
+    <p class="hero-eyebrow">Lagos — Since 2022</p>
+    <h1 class="hero-headline">Carry<br>the Art</h1>
+    <p class="hero-sub">Handcrafted beaded bags,<br>made in Lagos.</p>
+    <a href="#featured" class="btn-red">Shop Now</a>
+
+    <!-- Decorative floral SVG near CTA -->
+    <svg style="margin-top:40px;opacity:0.22;" width="110" height="40" viewBox="0 0 110 40" fill="none">
+      <ellipse cx="20" cy="20" rx="14" ry="6" fill="#E97197" transform="rotate(0 20 20)"/>
+      <ellipse cx="20" cy="20" rx="14" ry="6" fill="#E97197" transform="rotate(45 20 20)"/>
+      <ellipse cx="20" cy="20" rx="14" ry="6" fill="#E97197" transform="rotate(90 20 20)"/>
+      <ellipse cx="20" cy="20" rx="14" ry="6" fill="#E97197" transform="rotate(135 20 20)"/>
+      <circle cx="20" cy="20" r="5" fill="#F7F4DE"/>
+      <line x1="38" y1="20" x2="72" y2="20" stroke="#E97197" stroke-width="1.2"/>
+      <ellipse cx="90" cy="20" rx="14" ry="6" fill="none" stroke="#E97197" stroke-width="1" transform="rotate(0 90 20)"/>
+      <ellipse cx="90" cy="20" rx="14" ry="6" fill="none" stroke="#E97197" stroke-width="1" transform="rotate(60 90 20)"/>
+      <ellipse cx="90" cy="20" rx="14" ry="6" fill="none" stroke="#E97197" stroke-width="1" transform="rotate(120 90 20)"/>
+      <circle cx="90" cy="20" r="4" fill="#E97197"/>
+    </svg>
+  </div>
+
+  <div class="hero-img-wrap">
+    <img
+      src="./img/Bloom.png"
+      alt="STESSARA luxury beaded clutch"
+    />
+  </div>
+
+  <!-- Decorative bottom-right -->
+  <svg class="hero-deco-br" viewBox="0 0 80 80" fill="none">
+    <circle cx="40" cy="40" r="38" stroke="#E97197" stroke-width="0.8" stroke-dasharray="4 6"/>
+    <circle cx="40" cy="40" r="28" stroke="#E97197" stroke-width="0.5"/>
+    <circle cx="40" cy="40" r="6" fill="#E97197" opacity="0.4"/>
+  </svg>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     PEARL BEAD DIVIDER
+═══════════════════════════════════════════════════════ -->
+<div class="bead-divider" style="padding:32px 0 8px;">
+  <svg viewBox="0 0 800 32" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+    <line x1="0" y1="16" x2="800" y2="16" stroke="#E97197" stroke-width="0.5" opacity="0.5"/>
+    <g fill="#980002">
+      <circle cx="80"  cy="16" r="4"/>
+      <circle cx="140" cy="16" r="2.5"/>
+      <circle cx="200" cy="16" r="5.5"/>
+      <circle cx="260" cy="16" r="2.5"/>
+      <circle cx="320" cy="16" r="3.5"/>
+      <circle cx="380" cy="16" r="6.5"/>
+      <circle cx="420" cy="16" r="2.5"/>
+      <circle cx="460" cy="16" r="4"/>
+      <circle cx="520" cy="16" r="2.5"/>
+      <circle cx="580" cy="16" r="5"/>
+      <circle cx="640" cy="16" r="2.5"/>
+      <circle cx="700" cy="16" r="3.5"/>
+      <circle cx="720" cy="16" r="2"/>
+    </g>
+    <!-- Diamond center -->
+    <path d="M390 8 L398 16 L390 24 L382 16 Z" fill="#980002"/>
+    <!-- Small accent circles -->
+    <circle cx="380" cy="16" r="1.5" fill="#F7F4DE"/>
+    <circle cx="400" cy="16" r="1.5" fill="#F7F4DE"/>
+  </svg>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════
+     FEATURED PIECES
+═══════════════════════════════════════════════════════ -->
+<section id="featured">
+  <div class="featured-header" id="featured-header">
+    <p class="section-label">The Collection</p>
+    <h2 class="section-title">Featured Pieces</h2>
+    <p class="section-sub">Each bag takes up to 40 hours of meticulous beadwork</p>
+  </div>
+
+  <div class="product-grid">
+    <!-- Card 1 -->
+    <div class="product-card" data-product-id="1">
+      <div class="product-card-img">
+        <img src="./img/Mesh BAG.png" alt="The Mesh Bag"/>
+      </div>
+      <div class="product-card-info">
+        <p class="product-card-name">The Mesh Bag</p>
+        <p class="product-card-price">&#8358;85,000</p>
+        <button class="btn-red" onclick="openModal(1)">Shop Now</button>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="product-card" data-product-id="2">
+      <div class="product-card-img">
+        <img src="./img/Bloom.png" alt="2-Way Beaded Bag"/>
+      </div>
+      <div class="product-card-info">
+        <p class="product-card-name">2-Way Beaded Bag</p>
+        <p class="product-card-price">&#8358;120,000</p>
+        <button class="btn-red" onclick="openModal(2)">Shop Now</button>
+      </div>
+    </div>
+
+    <!-- BTS Shot 1
+    <div class="bts-shot">
+      <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1400&q=80" alt="Behind the scenes at STESSARA"/>
+      <span class="bts-shot-label">Behind the beads &mdash; Lagos atelier</span>
+    </div> -->
+
+    <!-- Card 3 -->
+    <div class="product-card" data-product-id="3">
+      <div class="product-card-img">
+        <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=600&q=80" alt="Bloom Bag"/>
+      </div>
+      <div class="product-card-info">
+        <p class="product-card-name">Bloom Bag</p>
+        <p class="product-card-price">&#8358;95,000</p>
+        <button class="btn-red" onclick="openModal(3)">Shop Now</button>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="product-card" data-product-id="4">
+      <div class="product-card-img">
+        <img src="./img/Mesh BAG.png" alt="Coeur Mini"/>
+      </div>
+      <div class="product-card-info">
+        <p class="product-card-name">C&oelig;ur Mini</p>
+        <p class="product-card-price">&#8358;75,000</p>
+        <button class="btn-red" onclick="openModal(4)">Shop Now</button>
+      </div>
+    </div>
+
+    <!-- BTS Shot 2 -->
+    <div class="bts-shot">
+      <img src="https://images.unsplash.com/photo-1521310192545-4ac7951413f0?w=1400&q=80" alt="STESSARA lifestyle"/>
+      <span class="bts-shot-label">Worn with intention &mdash; every stitch deliberate</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     PULL QUOTE
+═══════════════════════════════════════════════════════ -->
+<div class="pull-quote-section fade-section" id="pull-quote">
+  <!-- Pearl strand mini divider -->
+  <svg width="200" height="20" viewBox="0 0 200 20" style="margin:0 auto 28px;" fill="none">
+    <line x1="0" y1="10" x2="200" y2="10" stroke="#E97197" stroke-width="0.6" opacity="0.4"/>
+    <circle cx="40" cy="10" r="3" fill="#E97197"/>
+    <circle cx="70" cy="10" r="2" fill="#E97197"/>
+    <circle cx="100" cy="10" r="4" fill="#E97197"/>
+    <circle cx="130" cy="10" r="2" fill="#E97197"/>
+    <circle cx="160" cy="10" r="3" fill="#E97197"/>
+  </svg>
+  <blockquote class="pull-quote">
+    "Luxury is not about price &mdash; it is about the hours of love poured into every bead."
+  </blockquote>
+  <p class="pull-quote-attr">STESSARA Studio, Lagos</p>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════
+     ABOUT
+═══════════════════════════════════════════════════════ -->
+<section id="about">
+  <div>
+    <p class="about-tag">Our Story</p>
+    <h2 class="about-headline">Made by hand.<br>Worn with pride.</h2>
+    <p class="about-text">
+      STESSARA was born in Lagos out of a love for African artistry and global fashion. Every bag begins as a sketch, becomes a frame, and is slowly dressed in thousands of glass beads — each one placed by hand. We believe the woman who carries STESSARA knows who she is. She doesn't follow trends. She sets them.
+    </p>
+    <a href="#featured" class="btn-outline" style="color:var(--white);border-color:rgba(255,255,255,0.35);">Browse the Collection</a>
+  </div>
+  <div class="about-img-wrap">
+    <img
+      src="https://images.unsplash.com/photo-1590874103328-eac38a683ce7?w=800&q=80"
+      alt="STESSARA handcrafted beaded bag"
+    />
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     PRODUCT MODAL
+═══════════════════════════════════════════════════════ -->
+<div id="modal-overlay">
+  <div class="product-modal" id="product-modal" role="dialog" aria-modal="true">
+    <button class="modal-close" id="modal-close-btn" aria-label="Close modal">&#x2715;</button>
+    <img class="modal-img" id="modal-img" src="" alt=""/>
+    <div class="modal-body">
+      <p class="modal-tag" id="modal-tag">STESSARA Collection</p>
+      <h3 class="modal-name" id="modal-name">Bag Name</h3>
+      <p class="modal-desc" id="modal-desc">Loading description...</p>
+      <p class="modal-price" id="modal-price">&#8358;0</p>
+      <div class="modal-actions">
+        <button class="btn-red w-full" id="modal-add-cart">Add to Cart</button>
+        <a class="btn-green w-full" id="modal-whatsapp" href="#" target="_blank" rel="noopener">
+          <!-- WhatsApp icon -->
+          <svg width="18" height="18" viewBox="0 0 32 32" fill="white">
+            <path d="M16 0C7.164 0 0 7.164 0 16c0 2.82.736 5.474 2.027 7.782L0 32l8.43-2.004A15.94 15.94 0 0016 32c8.836 0 16-7.164 16-16S24.836 0 16 0zm8.164 22.328c-.344.968-2.008 1.848-2.758 1.964-.75.116-1.68.164-2.714-.172-.626-.2-1.428-.466-2.454-.914-4.312-1.862-7.134-6.24-7.35-6.532-.214-.29-1.748-2.324-1.748-4.434 0-2.11 1.108-3.146 1.5-3.572.392-.426.856-.532 1.142-.532.286 0 .572.002.822.014.264.014.618-.1.968.738.362.864 1.23 2.972 1.338 3.186.108.214.18.464.036.75-.143.286-.214.464-.428.714-.214.25-.45.558-.642.75-.214.214-.436.444-.188.872.25.428 1.108 1.832 2.38 2.966 1.636 1.458 3.016 1.91 3.444 2.124.428.214.676.18.924-.108.25-.286 1.072-1.25 1.358-1.678.286-.428.572-.358.964-.214.392.142 2.488 1.172 2.916 1.386.428.214.714.322.82.5.106.178.106 1.032-.238 2z"/>
+          </svg>
+          Send via WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════
+     CART
+═══════════════════════════════════════════════════════ -->
+<div id="cart-overlay"></div>
+<aside id="cart-drawer" role="complementary" aria-label="Shopping cart">
+  <div class="cart-header">
+    <h2 class="cart-title">Your Cart</h2>
+    <button class="cart-close-btn" id="cart-close-btn">&#x2715;</button>
+  </div>
+  <div class="cart-items" id="cart-items-list"></div>
+  <div class="cart-footer">
+    <div class="cart-subtotal">
+      <span>Subtotal</span>
+      <strong id="cart-subtotal-val">&#8358;0</strong>
+    </div>
+    <button class="btn-red w-full" id="checkout-open-btn">Checkout</button>
+  </div>
+</aside>
+
+<!-- ═══════════════════════════════════════════════════════
+     CHECKOUT
+═══════════════════════════════════════════════════════ -->
+<div id="checkout-overlay">
+  <div class="checkout-inner">
+    <button class="checkout-close" id="checkout-close-btn">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+        <line x1="1" y1="8" x2="15" y2="8"/>
+        <polyline points="6,3 1,8 6,13"/>
+      </svg>
+      Back
+    </button>
+
+    <div class="step-dots">
+      <div class="step-dot active" id="dot-1"></div>
+      <div class="step-dot" id="dot-2"></div>
+    </div>
+
+    <!-- Step 1: Delivery -->
+    <div class="checkout-step active" id="step-1">
+      <h2 class="checkout-heading">Delivery<br>Details</h2>
+      <p class="checkout-sub">Where shall we send your piece?</p>
+
+      <div class="form-group">
+        <label for="f-name">Full Name</label>
+        <input type="text" id="f-name" placeholder="Your full name" />
+      </div>
+      <div class="form-group">
+        <label for="f-phone">Phone Number</label>
+        <input type="tel" id="f-phone" placeholder="+234 800 000 0000" />
+      </div>
+      <div class="form-group">
+        <label for="f-address">Delivery Address</label>
+        <input type="text" id="f-address" placeholder="Street address, apartment..." />
+      </div>
+      <div class="form-group">
+        <label for="f-city">City</label>
+        <input type="text" id="f-city" placeholder="Lagos" />
+      </div>
+      <div class="form-group">
+        <label for="f-state">State</label>
+        <input type="text" id="f-state" placeholder="Lagos State" />
+      </div>
+
+      <div class="checkout-actions" style="margin-top:32px;">
+        <button class="btn-red w-full" id="step-1-continue">Continue to Payment</button>
+      </div>
+    </div>
+
+    <!-- Step 2: Payment -->
+    <div class="checkout-step" id="step-2">
+      <h2 class="checkout-heading">Complete<br>Your Order</h2>
+      <p class="checkout-sub">One transfer away from something beautiful.</p>
+
+      <div class="bank-details">
+        <h4>Bank Transfer Details</h4>
+        <div class="bank-row">
+          <span>Bank</span>
+          <strong>GTBank</strong>
+        </div>
+        <div class="bank-row">
+          <span>Account Number</span>
+          <strong>0123456789</strong>
+        </div>
+        <div class="bank-row">
+          <span>Account Name</span>
+          <strong>STESSARA LAGOS</strong>
+        </div>
+        <div class="bank-row">
+          <span>Amount</span>
+          <strong id="checkout-amount">&#8358;0</strong>
+        </div>
+      </div>
+
+      <p class="checkout-note">
+        Transfer the exact amount and send your proof of payment via WhatsApp. Your order will be confirmed and dispatched within 24 hours.
+      </p>
+
+      <div class="checkout-actions">
+        <a class="btn-green w-full" id="checkout-whatsapp" href="#" target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 32 32" fill="white">
+            <path d="M16 0C7.164 0 0 7.164 0 16c0 2.82.736 5.474 2.027 7.782L0 32l8.43-2.004A15.94 15.94 0 0016 32c8.836 0 16-7.164 16-16S24.836 0 16 0zm8.164 22.328c-.344.968-2.008 1.848-2.758 1.964-.75.116-1.68.164-2.714-.172-.626-.2-1.428-.466-2.454-.914-4.312-1.862-7.134-6.24-7.35-6.532-.214-.29-1.748-2.324-1.748-4.434 0-2.11 1.108-3.146 1.5-3.572.392-.426.856-.532 1.142-.532.286 0 .572.002.822.014.264.014.618-.1.968.738.362.864 1.23 2.972 1.338 3.186.108.214.18.464.036.75-.143.286-.214.464-.428.714-.214.25-.45.558-.642.75-.214.214-.436.444-.188.872.25.428 1.108 1.832 2.38 2.966 1.636 1.458 3.016 1.91 3.444 2.124.428.214.676.18.924-.108.25-.286 1.072-1.25 1.358-1.678.286-.428.572-.358.964-.214.392.142 2.488 1.172 2.916 1.386.428.214.714.322.82.5.106.178.106 1.032-.238 2z"/>
+          </svg>
+          Send Order via WhatsApp
+        </a>
+        <button class="btn-outline w-full" id="step-2-back">Back to Delivery Details</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════
+     FOOTER
+═══════════════════════════════════════════════════════ -->
+<footer id="footer">
+  <div class="footer-top">
+    <p class="footer-tagline">For those who love to stand out.</p>
+  </div>
+
+  <div class="footer-grid">
+    <!-- Left -->
+    <div class="footer-col">
+      <p class="footer-col-title">Help</p>
+      <a href="#">Contact Us</a>
+      <a href="#">My Order</a>
+      <a href="#">Returns & Exchanges</a>
+      <a href="#">FAQ</a>
+    </div>
+
+    <!-- Center -->
+    <div class="footer-col footer-col-center">
+      <div class="footer-brand-name">STESSARA</div>
+      <p>Every piece is handmade in Lagos, Nigeria. Crafted with love, worn with pride.</p>
+    </div>
+
+    <!-- Right -->
+    <div class="footer-col footer-col-right">
+      <p class="footer-col-title">Follow</p>
+      <div class="social-links" style="justify-content:flex-end;margin-bottom:0;">
+        <!-- Instagram -->
+        <a href="#" class="social-link" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+          </svg>
+        </a>
+        <!-- TikTok -->
+        <a href="#" class="social-link" aria-label="TikTok">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.77a4.85 4.85 0 01-1.01-.08z"/>
+          </svg>
+        </a>
+        <!-- Pinterest -->
+        <a href="#" class="social-link" aria-label="Pinterest">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 01.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.632-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p class="footer-copy">&copy; 2025 STESSARA Lagos. All rights reserved.</p>
+    <p class="footer-copy" style="font-style:italic;font-family:'Cormorant Garamond',serif;">Handmade with love in Nigeria.</p>
+  </div>
+</footer>
+
+
+</body>
+</html>
