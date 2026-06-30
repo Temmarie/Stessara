@@ -80,8 +80,10 @@ export default function CustomOrderSection() {
     >
       <div className="max-w-7xl mx-auto px-5 md:px-10">
 
+
+
         {/* Inspiration photos */}
-        <RevealOnScroll>
+        {/* <RevealOnScroll>
           <div className="grid grid-cols-3 gap-3 md:gap-6 mb-16 md:mb-20">
             {BTS_PHOTOS.slice(0, 3).map((src, i) => (
               <motion.div
@@ -103,7 +105,7 @@ export default function CustomOrderSection() {
               </motion.div>
             ))}
           </div>
-        </RevealOnScroll>
+        </RevealOnScroll> */}
 
         {/* Header */}
         <RevealOnScroll className="text-center mb-12 md:mb-16 max-w-2xl mx-auto">

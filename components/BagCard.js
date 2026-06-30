@@ -38,7 +38,7 @@ export default function BagCard({ bag, priority = false }) {
         </p>
       </div>
       <p className="font-sans text-xs uppercase tracking-wide-luxe text-ink/50 mt-2 px-1">
-        {bag.collection === 'petal' ? 'Petal Collection' : 'Bloom Collection'}
+        {bag.collection === 'petal' ? 'Petal Collection' : 'Stessara 0\'1   Collection'}
       </p>
     </Link>
   );

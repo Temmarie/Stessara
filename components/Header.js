@@ -10,10 +10,10 @@ import { useCart } from './CartProvider';
 
 const NAV = [
   { href: '/',             label: 'Home' },
-  { href: '/collections/petal', label: 'Collections' },
+  { href: '/collections/stessara01', label: 'Collections' },
   { href: '/custom-order', label: 'Custom Order' },
   { href: '/#contact',     label: 'Contact' },
-];
+]; 
 
 export default function Header() {
   const pathname = usePathname();

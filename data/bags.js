@@ -37,6 +37,7 @@ const PHOTOS = {
   // Collection covers
   coverPetal:     IMG("cover-petal"),
   coverBloom:     IMG("cover-bloom"),
+  coverStessara:     IMG("cover-stessara"),
 };
 
 // Helper: build a colour variant image (same photo, different tint query)
@@ -51,7 +52,7 @@ export const BAGS = [
   {
     slug: 'petals-clutch',
     name: 'Petals Clutch',
-    collection: 'petal',
+    collection: 'stessara01',
     tagline: 'A whisper of florals in the palm of your hand.',
     description:
       'Our signature piece. The Petals Clutch is hand-strung with thousands of glass seed beads in a soft floral motif. Designed for the woman who loves a quiet kind of drama — feminine, intentional, and unmistakably hers.',
@@ -73,7 +74,7 @@ export const BAGS = [
   {
     slug: 'bloom-bag',
     name: 'Bloom Bag',
-    collection: 'petal',
+    collection: 'stessara01',
     tagline: 'The bag that opened petals, now reborn.',
     description:
       'Inspired by Lagos sunsets. The Bloom Bag is a full-floral beaded tote with a removable inner pouch — wear it open for a roomy daytime carry, or cinched for a structured evening silhouette.',
@@ -93,7 +94,7 @@ export const BAGS = [
   {
     slug: 'coeur-mini',
     name: 'Cœur Mini',
-    collection: 'petal',
+    collection: 'stessara01',
     tagline: 'Tiny. Precious. A heart-shaped keepsake.',
     description:
       'A miniature heart-shaped beaded clutch, the Cœur Mini is our love letter to small, intentional things. Carry it to dinners, dates, and the moments you want to remember.',
@@ -113,7 +114,7 @@ export const BAGS = [
   {
     slug: 'garden-tote',
     name: 'Garden Tote',
-    collection: 'petal',
+    collection: 'stessara01',
     tagline: 'A walk through a flower market, in bag form.',
     description:
       'A full-beaded tote with a botanical motif inspired by the markets of Lagos. Roomy enough for your day, soft enough to feel like an accessory.',
@@ -155,7 +156,7 @@ export const BAGS = [
   {
     slug: 'midnight-mesh',
     name: 'Midnight Mesh',
-    collection: 'bloom',
+    collection: 'stessara01',
     tagline: 'Dark. Deliberate. The bag for after dark.',
     description:
       'A fully beaded mesh bag in deep, jewel tones. Inspired by Lagos nightlife — the Midnight Mesh carries everything you need and nothing you don\'t.',
@@ -175,7 +176,7 @@ export const BAGS = [
   {
     slug: 'two-way-beaded-bag',
     name: '2-Way Beaded Bag',
-    collection: 'bloom',
+    collection: 'stessara01',
     tagline: 'Two silhouettes. One signature bag.',
     description:
       'Wear it as a structured top-handle, or release the strap and wear it crossbody. The 2-Way is our most versatile piece — and the one our customers reach for again and again.',
@@ -265,25 +266,34 @@ export const HERO_SLIDES = BAGS.filter((b) => b.hero).slice(0, 4);
 export const FEATURED_BAGS = BAGS.filter((b) => b.featured).slice(0, 4);
 
 export const PETAL_BAGS = BAGS.filter((b) => b.collection === 'petal');
-export const BLOOM_BAGS = BAGS.filter((b) => b.collection === 'bloom');
+export const STESSARA01_BAGS = BAGS.filter((b) => b.collection === 'stessara01');
+// export const BLOOM_BAGS = BAGS.filter((b) => b.collection === 'bloom');
 
 export const COLLECTIONS = [
-  {
-    slug: 'petal',
-    name: 'Petal Collection',
-    tagline: 'Floral. Soft. Romantic.',
+  // {
+  //   slug: 'petal',
+  //   name: 'Petal Collection',
+  //   tagline: 'Floral. Soft. Romantic.',
+  //   description:
+  //     'The Petal Collection is our softer side — floral motifs, blush tones, and silhouettes designed for the moments you want to feel like yourself.',
+  //   coverImage: PHOTOS.coverPetal,
+  // },
+    {
+    slug: 'stessara01',
+    name: ' Stessara 0\'1   Collection',
+    tagline: 'Floral. Soft. Functional.',
     description:
-      'The Petal Collection is our softer side — floral motifs, blush tones, and silhouettes designed for the moments you want to feel like yourself.',
-    coverImage: PHOTOS.coverPetal,
+      'The Stessara 0\'1 Collection is our softer side — floral motifs, blush tones, and silhouettes designed for the moments you want to feel like yourself.',
+    coverImage: PHOTOS.coverStessara,
   },
-  {
-    slug: 'bloom',
-    name: 'Bloom Collection',
-    tagline: 'Bold. Dark. Unapologetic.',
-    description:
-      'The Bloom Collection is for after dark. Jewel tones, structured silhouettes, and the kind of beadwork that turns heads across the room.',
-    coverImage: PHOTOS.coverBloom
-  },
+  // {
+  //   slug: 'bloom',
+  //   name: 'Bloom Collection',
+  //   tagline: 'Bold. Dark. Unapologetic.',
+  //   description:
+  //     'The Bloom Collection is for after dark. Jewel tones, structured silhouettes, and the kind of beadwork that turns heads across the room.',
+  //   coverImage: PHOTOS.coverBloom
+  // },
 ];
 
 export const BTS_PHOTOS = [

@@ -3,8 +3,8 @@ import CollectionPage from '@/components/CollectionPage';
 import { COLLECTIONS, PETAL_BAGS } from '@/data/bags';
 
 export const metadata = {
-  title: 'Petal Collection — STESSARA',
-  description: 'Floral, soft, romantic bead bags from the STESSARA Petal Collection.',
+  title: 'Stessara Collection — STESSARA',
+  description: 'Floral, soft, romantic bead bags from the STESSARA 01 Collection.',
 };
 
 export default function PetalCollectionPage() {

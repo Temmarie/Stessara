@@ -45,7 +45,7 @@ export default function BagDetailClient({ bag }) {
       {/* Details */}
       <div className="lg:py-6">
         <p className="font-sans text-xs uppercase tracking-wide-luxe text-rose mb-3">
-          {bag.collection === 'petal' ? 'Petal Collection' : 'Bloom Collection'}
+          {bag.collection === 'petal' ? 'Petal Collection' : 'Stessara 0\'1 Collection'}
         </p>
 
         <h1 className="font-script text-rose text-5xl md:text-6xl lg:text-7xl mb-4 leading-[0.95]">
@@ -132,7 +132,7 @@ export default function BagDetailClient({ bag }) {
                      text-ink/60 hover:text-crimson
                      transition-colors duration-700 ease-silk"
         >
-          ← Back to {bag.collection === 'petal' ? 'Petal' : 'Bloom'} Collection
+          ← Back to {bag.collection === 'petal' ? 'Petal' : 'Stessara 0\'1'} Collection 
         </Link>
       </div>
     </div>
