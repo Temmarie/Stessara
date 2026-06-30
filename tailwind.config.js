@@ -12,6 +12,7 @@ module.exports = {
         // STESSARA palette — ONLY these
         crimson: '#980002',     // deep red — CTAs, titles
         rose: '#E97197',        // soft pink — collection/bag names
+        // rose: '#980002',
         ink: '#000000',         // black — header, footer, body text
         paper: '#FFFFFF',       // white — main background
         cream: '#FAF7F5',       // off-white — subtle section contrast

@@ -30,7 +30,7 @@ export default function CollectionsSection() {
 
                 {/* Gradient — bottom-up so text reads */}
                 <div className="absolute inset-0 bg-gradient-to-t from-ink/70 via-ink/10 to-transparent" />
-
+                      
                 <div className="absolute inset-x-0 bottom-0 p-8 md:p-10 text-paper">
                   <p className="font-sans text-xs uppercase tracking-wide-luxe text-rose mb-2">
                     {c.tagline}

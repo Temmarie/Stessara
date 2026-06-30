@@ -32,7 +32,7 @@ export default function BagCard({ bag, priority = false }) {
         )}
       </div>
       <div className="flex items-baseline justify-between gap-4 px-1">
-        <h3 className="font-script text-rose text-2xl md:text-3xl">{bag.name}</h3>
+        <h3 className="font-script text-crimson text-2xl md:text-3xl">{bag.name}</h3>
         <p className="font-sans text-sm text-ink/70 whitespace-nowrap">
           {formatNGN(bag.price)}
         </p>
