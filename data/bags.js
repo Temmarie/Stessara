@@ -1,14 +1,3 @@
-// =============================================================
-// STESSARA — Bag catalogue (MVP sample data)
-// All prices in Nigerian Naira (₦). Replace with real CMS later.
-// =============================================================
-//
-// Image strategy: each bag has one main IMG hero + 3 colour
-// variants (different photo IDs tinted via overlay where needed).
-// Replace these IDs with real product photography once available.
-
-
-
 // Helper for local images in /img folder
 const IMG = (name) => `/img/${name}.png`;
 // const IMG = (file) => `/img/${file}.png`;
@@ -18,7 +7,29 @@ const PHOTOS = {
   // Petal collection — soft / floral
   petalsClutch:   IMG("petals-clutch"),
   bloomBag:       IMG("bloom-bag"),
+  brownBloomBag: IMG("brown-bloom-bag-front"),
+  brownBloomBagBack:IMG('brown-bloom-bag-back'),
+  brownBloomBagSide:IMG('brown-bloom-bag-side'),
+  brownBloomBagInside:IMG('brown-bloom-bag-inside'),
+
+  whiteBloomBag: IMG("white-bloom-bag-front"),
+  whiteBloomBagBack:IMG('white-bloom-bag-back'),
+  whiteBloomBagSide:IMG('white-bloom-bag-side'),
+  whiteBloomBagInside:IMG('white-bloom-bag-inside'),
+
   coeurMini:      IMG("coeur-mini"),
+  redCoeurMini:      IMG("coeur-mini"),
+    redCoeurMini: IMG("red-coeur-mini-front"),
+  redCoeurMiniBack:IMG('red-coeur-mini-back'),
+  redCoeurMiniSide:IMG('red-coeur-mini-side'),
+  redCoeurMiniInside:IMG('red-coeur-mini-inside'),
+
+  
+  greenCoeurMini: IMG("green-coeur-mini-front"),
+  greenCoeurMiniBack:IMG('green-coeur-mini-back'),
+  greenCoeurMiniSide:IMG('green-coeur-mini-side'),
+  greenCoeurMiniInside:IMG('green-coeur-mini-inside'),
+
   gardenTote:     IMG("garden-tote"),
   whisperPouch:   IMG("whisper-pouch"),
 
@@ -85,11 +96,41 @@ export const BAGS = [
     delivery: 'Ships in 7–10 working days from Lagos.',
     featured: true,
     photos: [PHOTOS.bloomBag],
-    variants: [
-      { id: 'rose',    name: 'Rose',    hex: '#E97197', image: (PHOTOS.bloomBag) },
-      { id: 'coral',   name: 'Coral',   hex: '#FF8A65', image: (PHOTOS.bloomBag) },
-      { id: 'sage',    name: 'Sage',    hex: '#8FA68E', image: (PHOTOS.bloomBag) },
+variants: [
+  {
+    id: 'green',
+    name: 'Green',
+    hex: '#094C13',
+    images: [
+      PHOTOS.bloomBag,
+      PHOTOS.bloomBagBack,
+      PHOTOS.bloomBagSide,
+      PHOTOS.bloomBagInside,
     ],
+  },
+  {
+    id: 'brown',
+    name: 'Brown',
+    hex: '#421410',
+    images: [
+      PHOTOS.brownBloomBag,
+      PHOTOS.brownBloomBagBack,
+      PHOTOS.brownBloomBagSide,
+      PHOTOS.brownBloomBagInside,
+    ],
+  },
+  {
+    id: 'white',
+    name: 'White',
+    hex: '#FFFFFF',
+    images: [
+      PHOTOS.whiteBloomBag,
+      PHOTOS.whiteBloomBagBack,
+      PHOTOS.whiteBloomBagSide,
+      PHOTOS.whiteBloomBagInside,
+    ],
+  },
+],
   },
   {
     slug: 'coeur-mini',
@@ -104,12 +145,33 @@ export const BAGS = [
     care: 'Spot clean only.',
     delivery: 'Ships in 5–7 working days from Lagos.',
     featured: true,
+    hero:true,
     photos: [PHOTOS.coeurMini],
     variants: [
-      { id: 'blush',   name: 'Blush',   hex: '#E97197', image: (PHOTOS.coeurMini) },
-      { id: 'red',     name: 'Red',     hex: '#980002', image: (PHOTOS.coeurMini) },
-      { id: 'cream',   name: 'Cream',   hex: '#F5EFE6', image: (PHOTOS.coeurMini) },
+        {
+    id: 'red',
+    name: 'Red',
+    hex: '#980002',
+    images: [
+       PHOTOS.redCoeurMini,
+      PHOTOS.redCoeurMiniInside,
+      PHOTOS.redCoeurMiniBack,
+      PHOTOS.redCoeurMiniSide,
     ],
+  },
+  {
+    id: 'green',
+    name: 'Green',
+    hex: '#094C13',
+    images: [
+      PHOTOS.greenCoeurMini,
+      PHOTOS.greenCoeurMiniInside,
+      PHOTOS.greenCoeurMiniBack,
+      PHOTOS.greenCoeurMiniSide,
+    ],
+  },
+
+],
   },
   {
     slug: 'garden-tote',
@@ -123,7 +185,8 @@ export const BAGS = [
     dimensions: '34cm × 30cm × 12cm',
     care: 'Wipe with a soft, dry cloth.',
     delivery: 'Ships in 7–10 working days from Lagos.',
-    featured: false,
+    featured: true,
+    hero:true,
     photos: [PHOTOS.gardenTote],
     variants: [
       { id: 'sage',    name: 'Sage',    hex: '#8FA68E', image: (PHOTOS.gardenTote) },
@@ -165,7 +228,7 @@ export const BAGS = [
     dimensions: '24cm × 18cm × 8cm',
     care: 'Wipe with a soft, dry cloth.',
     delivery: 'Ships in 7–10 working days from Lagos.',
-    featured: false,
+    featured: true,
     photos: [PHOTOS.midnightMesh],
     variants: [
       { id: 'noir',    name: 'Noir',    hex: '#0E0E0E', image: (PHOTOS.midnightMesh) },

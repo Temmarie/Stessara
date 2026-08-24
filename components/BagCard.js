@@ -14,7 +14,7 @@ export default function BagCard({ bag, priority = false }) {
   return (
     <Link
       href={`/bags/${bag.slug}`}
-      className="group block hover-lift"
+      className="group block hover-lift "
       aria-label={`View ${bag.name}`}
     >
       <div className="relative aspect-[4/5] bg-cream overflow-hidden mb-5">
