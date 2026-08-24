@@ -6,17 +6,33 @@ const IMG = (name) => `/img/${name}.png`;
 const PHOTOS = {
   // Petal collection — soft / floral
   petalsClutch:   IMG("petals-clutch"),
+    petalsClutchBagFront:  IMG("petals-clutch-bag-front"),
+  petalsClutchBagBack:   IMG("petals-clutch-bag-back"),
+  petalsClutchBagSide:   IMG("petals-clutch-bag-side"),
+    petalsClutchBagInside:   IMG("petals-clutch-bag-inside"),
+
+  // bloom bag
+// green
   bloomBag:       IMG("bloom-bag"),
+  greenBloomBag: IMG("green-bloom-bag-front"),
+  greenBloomBagBack:IMG('green-bloom-bag-back'),
+  greenBloomBagSide:IMG('green-bloom-bag-side'),
+  greenBloomBagInside:IMG('green-bloom-bag-inside'),
+
+  // brown
   brownBloomBag: IMG("brown-bloom-bag-front"),
   brownBloomBagBack:IMG('brown-bloom-bag-back'),
   brownBloomBagSide:IMG('brown-bloom-bag-side'),
   brownBloomBagInside:IMG('brown-bloom-bag-inside'),
 
+  // white-red
   whiteBloomBag: IMG("white-bloom-bag-front"),
   whiteBloomBagBack:IMG('white-bloom-bag-back'),
   whiteBloomBagSide:IMG('white-bloom-bag-side'),
   whiteBloomBagInside:IMG('white-bloom-bag-inside'),
 
+  // coeur mini
+  //red
   coeurMini:      IMG("coeur-mini"),
   redCoeurMini:      IMG("coeur-mini"),
     redCoeurMini: IMG("red-coeur-mini-front"),
@@ -24,21 +40,40 @@ const PHOTOS = {
   redCoeurMiniSide:IMG('red-coeur-mini-side'),
   redCoeurMiniInside:IMG('red-coeur-mini-inside'),
 
-  
+  // green 
   greenCoeurMini: IMG("green-coeur-mini-front"),
   greenCoeurMiniBack:IMG('green-coeur-mini-back'),
   greenCoeurMiniSide:IMG('green-coeur-mini-side'),
   greenCoeurMiniInside:IMG('green-coeur-mini-inside'),
 
+// garden tote
   gardenTote:     IMG("garden-tote"),
-  whisperPouch:   IMG("whisper-pouch"),
 
-  // Bloom collection — bolder / darker
+  //midnight mesh
+  //black
   midnightMesh:   IMG("midnight-mesh"),
-  twoWayBeaded:   IMG("two-way-beaded"),
+    blackMidnightMeshFront:   IMG("black-midnight-mesh-front"),
+    blackMidnightMeshSide:   IMG("black-midnight-mesh-side"),
+    // red
+    redMidnightMeshFront:   IMG("red-midnight-mesh-front"),
+    redMidnightMeshSide:   IMG("red-midnight-mesh-side"),
+    // peach
+    peachMidnightMeshFront:   IMG("peach-midnight-mesh-front"),
+    peachMidnightMeshSide:   IMG("peach-midnight-mesh-side"),
+
+
+// two way beaded 
+    twoWayBeaded:   IMG("two-way-beaded"),
+    twoWayBeadedFront:   IMG("two-way-beaded-front"),
+    twoWayBeadedHandle:   IMG("two-way-beaded-handle"),
+    // twoWayBeadedSide:   IMG("two-way-beaded-side"),
+    twoWayBeadedFullHandle:   IMG("two-way-beaded-full-handle"),
+      twoWayBeadedBTS:   IMG("two-way-beaded-BTS"),
+
   noirClutch:     IMG("noir-clutch"),
   velvetPetal:    IMG("velvet-petal"),
   emberTote:      IMG("ember-tote"),
+  whisperPouch:   IMG("whisper-pouch"),
 
   // BTS (behind-the-scenes) lifestyle shots
   btsHands:       IMG("bts-hands"),
@@ -49,6 +84,7 @@ const PHOTOS = {
   coverPetal:     IMG("cover-petal"),
   coverBloom:     IMG("cover-bloom"),
   coverStessara:     IMG("cover-stessara"),
+  coverGarden:  IMG("garden-tote")
 };
 
 // Helper: build a colour variant image (same photo, different tint query)
@@ -74,12 +110,19 @@ export const BAGS = [
     delivery: 'Ships in 5–7 working days from Lagos.',
     featured: true,
     hero: true,
-    photos: [PHOTOS.petalsClutch],
+    photos: [PHOTOS.petalsClutchBagFront],
     variants: [
-      { id: 'blush',   name: 'Blush',   hex: '#E97197', image: (PHOTOS.petalsClutch) },
-      { id: 'cream',   name: 'Cream',   hex: '#F5EFE6', image: (PHOTOS.petalsClutch) },
-      { id: 'wine',    name: 'Wine',    hex: '#7A1A2E', image: (PHOTOS.petalsClutch) },
-      { id: 'noir',    name: 'Noir',    hex: '#0E0E0E', image: (PHOTOS.petalsClutch) },
+      { id: 'red', 
+        name: 'Red',   
+        hex: '#9E131C',
+        images: [
+      PHOTOS.petalsClutchBagFront,
+      PHOTOS.petalsClutchBagInside,
+      PHOTOS.petalsClutchBagSide,
+      PHOTOS.petalsClutch,
+    ],
+  },
+
     ],
   },
   {
@@ -95,7 +138,7 @@ export const BAGS = [
     care: 'Wipe with a soft, dry cloth.',
     delivery: 'Ships in 7–10 working days from Lagos.',
     featured: true,
-    photos: [PHOTOS.bloomBag],
+    photos: [PHOTOS.brownBloomBag],
 variants: [
   {
     id: 'green',
@@ -146,7 +189,7 @@ variants: [
     delivery: 'Ships in 5–7 working days from Lagos.',
     featured: true,
     hero:true,
-    photos: [PHOTOS.coeurMini],
+    photos: [PHOTOS.redCoeurMini],
     variants: [
         {
     id: 'red',
@@ -173,10 +216,79 @@ variants: [
 
 ],
   },
+  
+  {
+    slug: 'midnight-mesh',
+    name: 'Midnight Mesh',
+    collection: 'stessara01',
+    tagline: 'Dark. Deliberate. The bag for after dark.',
+    description:
+      'A fully beaded mesh bag in deep, jewel tones. Inspired by Lagos nightlife — the Midnight Mesh carries everything you need and nothing you don\'t.',
+    price: 175000,
+    material: 'Glass beads, mesh lining, magnetic clasp',
+    dimensions: '24cm × 18cm × 8cm',
+    care: 'Wipe with a soft, dry cloth.',
+    delivery: 'Ships in 7–10 working days from Lagos.',
+    featured: true,
+    photos: [PHOTOS.midnightMesh],
+    variants: [
+      { id: 'noir', 
+           name: 'Noir',   
+            hex: '#0E0E0E', 
+             images: [
+              PHOTOS.blackMidnightMeshFront,
+              PHOTOS.blackMidnightMeshSide,
+            ]},
+      { id: 'red',
+        name: 'Red',
+        hex: '#CE0809',
+          images: [
+              PHOTOS.redMidnightMeshFront,
+              PHOTOS.redMidnightMeshSide,
+            ] },
+      { id: 'peach',
+        name: 'Peach',
+        hex: '#D4ACA0',
+          images: [
+              PHOTOS.peachMidnightMeshFront,
+              PHOTOS.peachMidnightMeshSide,
+            ] },
+    ],
+  },
+  {
+    slug: 'two-way-beaded-bag',
+    name: '2-Way Beaded Bag',
+    collection: 'stessara01',
+    tagline: 'Two silhouettes. One signature bag.',
+    description:
+      'Wear it as a structured top-handle, or release the strap and wear it crossbody. The 2-Way is our most versatile piece — and the one our customers reach for again and again.',
+    price: 195000,
+    material: 'Glass beads, leather handles, adjustable strap, suede lining',
+    dimensions: '26cm × 20cm × 10cm',
+    care: 'Spot clean. Treat leather handles with conditioner.',
+    delivery: 'Ships in 7–10 working days from Lagos.',
+    featured: true,
+    hero: true,
+    photos: [PHOTOS.twoWayBeadedFront],
+    variants: [
+      { id: 'noir',
+        name: 'Noir',    
+        hex: '#0E0E0E',
+      images: [
+              PHOTOS.twoWayBeadedFront,
+              PHOTOS.twoWayBeadedFullHandle,
+              PHOTOS.twoWayBeadedSide,
+              PHOTOS.twoWayBeadedHandle,
+               PHOTOS.twoWayBeaded,
+              PHOTOS.twoWayBeadedBTS,
+            ] },
+    ],
+  },
+
   {
     slug: 'garden-tote',
     name: 'Garden Tote',
-    collection: 'stessara01',
+    collection: 'petal',
     tagline: 'A walk through a flower market, in bag form.',
     description:
       'A full-beaded tote with a botanical motif inspired by the markets of Lagos. Roomy enough for your day, soft enough to feel like an accessory.',
@@ -215,49 +327,6 @@ variants: [
     ],
   },
 
-  // ============= BLOOM COLLECTION =============
-  {
-    slug: 'midnight-mesh',
-    name: 'Midnight Mesh',
-    collection: 'stessara01',
-    tagline: 'Dark. Deliberate. The bag for after dark.',
-    description:
-      'A fully beaded mesh bag in deep, jewel tones. Inspired by Lagos nightlife — the Midnight Mesh carries everything you need and nothing you don\'t.',
-    price: 175000,
-    material: 'Glass beads, mesh lining, magnetic clasp',
-    dimensions: '24cm × 18cm × 8cm',
-    care: 'Wipe with a soft, dry cloth.',
-    delivery: 'Ships in 7–10 working days from Lagos.',
-    featured: true,
-    photos: [PHOTOS.midnightMesh],
-    variants: [
-      { id: 'noir',    name: 'Noir',    hex: '#0E0E0E', image: (PHOTOS.midnightMesh) },
-      { id: 'wine',    name: 'Wine',    hex: '#7A1A2E', image: (PHOTOS.midnightMesh) },
-      { id: 'emerald', name: 'Emerald', hex: '#0E5C40', image: (PHOTOS.midnightMesh) },
-    ],
-  },
-  {
-    slug: 'two-way-beaded-bag',
-    name: '2-Way Beaded Bag',
-    collection: 'stessara01',
-    tagline: 'Two silhouettes. One signature bag.',
-    description:
-      'Wear it as a structured top-handle, or release the strap and wear it crossbody. The 2-Way is our most versatile piece — and the one our customers reach for again and again.',
-    price: 195000,
-    material: 'Glass beads, leather handles, adjustable strap, suede lining',
-    dimensions: '26cm × 20cm × 10cm',
-    care: 'Spot clean. Treat leather handles with conditioner.',
-    delivery: 'Ships in 7–10 working days from Lagos.',
-    featured: true,
-    hero: true,
-    photos: [PHOTOS.twoWayBeaded],
-    variants: [
-      { id: 'noir',    name: 'Noir',    hex: '#0E0E0E', image: (PHOTOS.twoWayBeaded) },
-      { id: 'crimson', name: 'Crimson', hex: '#980002', image: (PHOTOS.twoWayBeaded) },
-      { id: 'gold',    name: 'Gold',    hex: '#C9A86A', image: (PHOTOS.twoWayBeaded) },
-      { id: 'ivory',   name: 'Ivory',   hex: '#F5EFE6', image: (PHOTOS.twoWayBeaded) },
-    ],
-  },
   {
     slug: 'noir-clutch',
     name: 'Noir Clutch',

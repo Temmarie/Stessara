@@ -7,9 +7,15 @@ import { motion, AnimatePresence } from 'framer-motion';
 // Array containing 4 BTS assets (mix of images and videos)
 const BTS_MEDIA = [
   { type: 'image', src: '/img/garden-tote.png', alt: 'Handmade bead bags being crafted in Lagos' },
-  { type: 'video', src: '/video/bts-weaving.mp4', alt: 'Artisan threading crystal beads close up' },
+    { type: 'image', src: '/img/beads-cut.png', alt: 'STESSARA studio bead bowl and scissors' },
   { type: 'image', src: '/img/bts-pic.png', alt: 'STESSARA studio workshop details' },
-  { type: 'video', src: '/video/bts-finishing.mp4', alt: 'Polishing the finished luxury handbag' }
+    { type: 'image', src: '/img/brown-beads.png', alt: 'STESSARA studio brown bead' },
+    { type: 'image', src: '/img/heart-strand.png', alt: 'STESSARA studio bead  ' },
+   { type: 'image', src: '/img/beads-bowl.png', alt: 'STESSARA studio bead bowl' },
+    { type: 'image', src: '/img/white-bloom-bts.png', alt: 'STESSARA studio bead  ' },
+    { type: 'image', src: '/img/couer-bowl.png', alt: 'STESSARA studio bead  ' },
+    { type: 'video', src: '/video/bts-weaving.mp4', alt: 'Artisan threading crystal beads close up' },
+
 ];
 
 export default function BTSCard({ index = 0 }) {
