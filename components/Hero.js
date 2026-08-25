@@ -6,6 +6,7 @@ import Link from 'next/link';
 import gsap from 'gsap';
 import { motion, AnimatePresence } from 'framer-motion';
 import { HERO_SLIDES } from '@/data/bags';
+import { Fullscreen } from 'lucide-react';
 
 const ROTATE_MS = 5000;
 
@@ -45,7 +46,7 @@ export default function Hero() {
 
   return (
     <section
-      className="relative w-full h-[100svh] min-h-[640px] overflow-hidden bg-ink"
+      className="relative w-full h-[90svh] min-h-[640px] overflow-hidden bg-ink"
       aria-label="Hero"
       onMouseEnter={() => setRevealed(true)}
       onMouseLeave={() => setRevealed(false)}
@@ -67,7 +68,7 @@ export default function Hero() {
               fill
               priority
               sizes="100vw"
-              className="object-cover"
+              className="object-cover w-full h-fit"
             />
           </div>
 
